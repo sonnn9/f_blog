@@ -1,0 +1,14 @@
+{
+    "list" : "List Categories",
+    "create" : "Create new Category",
+    "add" : "Add a Category",
+    "edit" : "Edit Category",
+    "category_name" : "Category Name",
+    "success_update" : "Category Updated.",
+    "success_add" : "Category Saved.",
+    "success_delete" : "Category Deleted.",
+    "btn_back" : "Back",
+    "btn_edit" : "Edit",
+    "btn_save" : "Save",
+    "btn_delete" : "Delete"
+}
