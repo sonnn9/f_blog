@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
         ]);
 
+        $this->call(PostsTableSeeder::class);
+
     }
 }
 
