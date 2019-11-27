@@ -12,9 +12,9 @@ class CategoriesTableSeeder extends Seeder
     public function run()
     {
         DB::table('categories')->insert([
-            ['name'=>'Tình cảm'],
-            ['name'=>'Kinh dị'],
-            ['name'=>'Hài hước'],            
+            ['name' => 'Tình cảm'],
+            ['name' => 'Kinh dị'],
+            ['name' => 'Hài hước'],            
         ]);
     }
 }
