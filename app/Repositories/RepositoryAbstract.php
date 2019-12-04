@@ -8,26 +8,26 @@ use App\Models\Post;
 
 abstract class RepositoryAbstract implements RepositoryInterface
 {
-    protected $model;
+    protected $model, $table;
 
     public function __construct()
     {
     }
 
-    public function create()
+    public function create($data)
     {
-        return $this->model = new Post;
+        return $this->model->create($data);
     }
 
     public function find($id)
     {
-        $post = $this->model->find($id);
-        if(!$post)
+        $result = $this->model->find($id);
+        if(!$result)
         {
             return [];
         }
 
-        return $post;
+        return $result;
     }
 
     public function show()
@@ -35,13 +35,16 @@ abstract class RepositoryAbstract implements RepositoryInterface
         return $this->model->all();
     }
 
-    public function edit($id)
+    public function edit($id, $data)
     {
-        return $this->model->find($id);
+        $result = $this->model->find($id);
+        $result->update($data);
+
+        return $result;
     }
 
     public function delete($id)
     {
-        return $this->model->find($id);
+        return $this->model->destroy($id);
     }
 }
