@@ -39,5 +39,6 @@
      "Login" : "Đăng nhập",
      "Register" : "Đăng ký",
      "Post has ID = " : "Bài đăng có ID = ",
-     "does not exist" : " không tồn tại"
+     "does not exist" : " không tồn tại",
+     "You do not have permission to edit" : "Bạn không có quyền được sửa"
     }

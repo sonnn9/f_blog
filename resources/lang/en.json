@@ -40,5 +40,6 @@
      "Login" : "Login",
      "Register" : "Register",
      "Post has ID = " : "Post has ID = ",
-     "does not exist" : " does not exist"
+     "does not exist" : " does not exist",
+     "You do not have permission to edit" : "You do not have permission to edit"
     }
