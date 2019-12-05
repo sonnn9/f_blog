@@ -12,5 +12,6 @@ class PostRepository extends RepositoryAbstract implements PostRepositoryInterfa
     public function __construct()
     {
         $this->model = new Post;
+        $this->table = 'posts';
     }
 }
