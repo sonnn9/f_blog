@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 Route::group(['prefix' => 'posts'], function () {
     Route::get('show', 'PostsController@getShow')->name('post.show');
-    Route::get('edit/{id}', 'PostsController@getEdit')->name('post.edit');;
+    Route::get('edit/{id}', 'PostsController@getEdit')->name('post.edit')->middleware('CheckLevel');
     Route::post('edit/{id}', 'PostsController@postEdit');
     Route::get('create', 'PostsController@getCreate')->name('post.create');
     Route::post('create', 'PostsController@postCreate');
