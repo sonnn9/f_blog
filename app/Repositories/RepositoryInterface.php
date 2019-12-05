@@ -7,11 +7,11 @@ interface RepositoryInterface
 
     public function find($id);
 
-    public function create();
+    public function create($data);
 
     public function show();
 
-    public function edit($id);
+    public function edit($id, $data);
 
     public function delete($id);
 }
