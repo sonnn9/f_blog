@@ -1,0 +1,14 @@
+{
+    "list" : "Danh sách các thể loại",
+    "create" : "Tạo mới Thể loại",
+    "add" : "Thêm một Thể loại",
+    "edit" : "Sửa Thể loại",
+    "category_name" : "Tên thể loại",
+    "success_update" : "Thể loại đã được cập nhật.",
+    "success_add" : "Thể loại đã được lưu.",
+    "success_delete" : "Thể loại đã bị xóa.",
+    "btn_back" : "Trở lại",
+    "btn_edit" : "Sửa",
+    "btn_save" : "Lưu",
+    "btn_delete" : "Xóa"
+}
