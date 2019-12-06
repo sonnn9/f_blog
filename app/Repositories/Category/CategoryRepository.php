@@ -48,7 +48,7 @@ class CategoryRepository implements CategoryRepositoryInterface
 
     public function find($id)
     {
-        $category = $this->model->findOrFail($id);
+        $category = $this->model->find($id);
 
         return $category;
     }

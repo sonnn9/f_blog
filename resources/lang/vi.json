@@ -11,6 +11,8 @@
     "btn_edit" : "Sửa",
     "btn_save" : "Lưu",
     "btn_delete" : "Xóa",
+    "btn_add" : "Thêm",
+    "enter_name" : "Nhập tên thể loại ... ",
     "News" : "Tin tức",
      "Home" : "Trang chủ",
      "Contact" : "Liên hệ",
@@ -29,7 +31,8 @@
      "Edit Post" : "Sửa bài đăng",
      "Add Post" : "Add bài đăng",
      "Search" : "Tìm kiếm",
-     "English" : "English",
+     "English" : "Tiếng Anh",
+     "Vietnamese" : "Tiếng Việt",
      "Menu" : "Menu",
      "User" : "User",
      "Creatd at" : "Creat at",
@@ -39,6 +42,7 @@
      "Login" : "Đăng nhập",
      "Register" : "Đăng ký",
      "Post has ID = " : "Bài đăng có ID = ",
+     "Category has ID = " : "Thể loại có ID = ",
      "does not exist" : " không tồn tại",
      "You do not have permission to edit" : "Bạn không có quyền được sửa"
     }

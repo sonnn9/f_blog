@@ -43,6 +43,10 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $category = $this->repository->find($id); 
+        if(empty($category))
+        {
+            return redirect()->route('categories.index')->with('message', __('Category has ID = ') . $id . __('does not exist'));
+        }
 
         return view('categories.edit', compact('category'));
     }
@@ -61,7 +65,13 @@ class CategoryController extends Controller
 
     public function delete($id)
     {
-        $categories = $this->repository->delete($id);
+        $category = $this->repository->find($id); 
+        if(empty($category))
+        {
+            return redirect()->route('categories.index')->with('message', __('Category has ID = ') . $id . __('does not exist'));
+        } else {
+            $categories = $this->repository->delete($id);
+        }
 
         return redirect()->route('categories.index')
             ->with('categories', $categories)

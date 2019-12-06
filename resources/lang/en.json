@@ -11,6 +11,8 @@
     "btn_edit" : "Edit",
     "btn_save" : "Save",
     "btn_delete" : "Delete",
+    "btn_add" : "Add",
+    "enter_name" : "Enter the category name ... ",
     "News" : "News",
      "Home" : "Home",
      "Contact" : "Contact",
@@ -40,6 +42,7 @@
      "Login" : "Login",
      "Register" : "Register",
      "Post has ID = " : "Post has ID = ",
+     "Category has ID = " : "Category has ID = ",
      "does not exist" : " does not exist",
      "You do not have permission to edit" : "You do not have permission to edit"
     }
