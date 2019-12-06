@@ -9,8 +9,8 @@
 	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ __('Category') }}</a>
 			<div class="dropdown-menu">
-				<a class="dropdown-item" href="#">{{ __('Add') }}</a>
-				<a class="dropdown-item" href="#">{{ __('List') }}</a>
+				<a class="dropdown-item" href="{{ route('categories.create') }}">{{ __('Add') }}</a>
+				<a class="dropdown-item" href="{{ route('categories.index') }}">{{ __('List') }}</a>
 			</div>		
 	<li class="nav-item dropdown">
 		<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ __('User') }}</a>
