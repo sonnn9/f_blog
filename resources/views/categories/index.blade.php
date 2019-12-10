@@ -19,7 +19,8 @@
             <div class="btn-group">
                 <a href="{{ route('categories.edit', ['id' => $category->id]) }}" class="btn btn-outline-success">{{ __('btn_edit') }}</a>
                 <a href="{{ route('categories.delete', ['id' => $category->id]) }}" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete ?');">{{ __('btn_delete') }}</a>
-            </div>
+            </div>    
+            <span class="badge badge-info">{{ $category->posts()->count() }}  {{ __('Post') }}</span>
         </li>
         @endforeach
     </ul>
