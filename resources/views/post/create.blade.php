@@ -17,21 +17,29 @@
     @endif
     @if (session('notification'))
     <div class="alert alert-success">
-        {{session('notification')}}
+        {{ session('notification') }}
     </div>
     @endif
     <form method="POST" action="">
         @csrf
+        <div class="form-group">
+            <label>Thể loại</label>
+            <select class="form-control" multiple id="categories" name="categories[]">
+                @foreach ($categories as $ct)
+            <option value="{{ $ct->id }}">{{ $ct->name }}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="form-group">    
             <label for="first_name">{{ __('Title') }}</label>
-            <input type="text" class="form-control" name="Title"/>
+            <input id="post-title" type="text" class="form-control" name="Title"/>
         </div>
 
         <div class="form-group">
             <label for="last_name">{{ __('Content') }}</label>
-            <input type="text" class="form-control" name="Content"/>
+            <input id="post-content" type="text" class="form-control" name="Content"/>
         </div>
-        <button type="submit" class="btn btn-primary">{{ __('Add Post') }}</button>
+        <button id="add-new-post" type="submit" class="btn btn-primary">{{ __('Add Post') }}</button>
     </form>
 </div>
 @endsection

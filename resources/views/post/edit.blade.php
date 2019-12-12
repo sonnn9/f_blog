@@ -17,18 +17,30 @@
     @endif
     @if (session('notification'))
         <div class="alert alert-success">
-            {{session('notification')}}
+            {{ session('notification') }}
         </div>
     @endif
     <form method="POST" action="">
         @csrf
+        <div class="form-group">
+            <label>Thể loại</label>
+            <select class="form-control" multiple id="categories" name="categories[]">
+                @foreach ($categories as $ct)
+            <option 
+            @if (in_array($ct->id, $posts->categories->pluck('id')->toArray()))
+                {{ "selected" }}
+            @endif
+            value="{{ $ct->id }}">{{ $ct->name }}</option>
+                @endforeach
+            </select>
+        </div>
         <div class="form-group">    
             <label for="first_name">{{ __('Title') }}</label>
-            <input type="text" class="form-control" name="Title" value="{{$posts->title}}"/>
+            <input type="text" class="form-control" name="Title" value="{{ $posts->title }}"/>
         </div>
         <div class="form-group">
             <label for="last_name">{{ __('Content') }}</label>
-        <input type="text" class="form-control" name="Content" value="{{$posts->content}}"/>
+        <input type="text" class="form-control" name="Content" value="{{ $posts->content }}"/>
         </div>
         <button type="submit" class="btn btn-primary">{{ __('Edit') }}</button>
     </form>
