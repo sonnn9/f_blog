@@ -8,11 +8,11 @@ class Post extends Model
 {
     protected $table = 'posts';
     
-    protected $guarded = ['id'];
+    protected $guarded = ['id', 'categories'];
     
     public function categories()
     {
 
-        return $this->belongsToMany(Post::class, 'post_category', 'category_id', 'post_id');
+        return $this->belongsToMany(Category::class, 'post_category', 'post_id', 'category_id');
     }
 }

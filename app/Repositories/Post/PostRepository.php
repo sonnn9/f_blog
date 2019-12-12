@@ -14,4 +14,34 @@ class PostRepository extends RepositoryAbstract implements PostRepositoryInterfa
         $this->model = new Post;
         $this->table = 'posts';
     }
+
+    public function create($data)
+    {
+        $category_id = $data['categories'];
+        $post = $this->model->create($data);
+        $post->categories()->attach($category_id);
+
+        return $post;
+    }
+
+    public function edit($id, $data)
+    {
+        $categoriy_id = $data['categories'];
+        $result = $this->model->find($id);
+        $result->update($data);
+        $result->categories()->sync($categoriy_id);
+
+        return $result;
+    }
+
+    public function find($id)
+    {
+        $result = $this->model->with('categories')->find($id);
+        if(!$result)
+        {
+            return [];
+        }
+
+        return $result;
+    }
 }

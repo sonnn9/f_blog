@@ -44,5 +44,6 @@
      "Post has ID = " : "Post has ID = ",
      "Category has ID = " : "Category has ID = ",
      "does not exist" : " does not exist",
-     "You do not have permission to edit" : "You do not have permission to edit"
+     "You do not have permission to edit" : "You do not have permission to edit",
+     "ID" : "ID"
     }

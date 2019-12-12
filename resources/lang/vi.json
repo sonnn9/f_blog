@@ -44,5 +44,6 @@
      "Post has ID = " : "Bài đăng có ID = ",
      "Category has ID = " : "Thể loại có ID = ",
      "does not exist" : " không tồn tại",
-     "You do not have permission to edit" : "Bạn không có quyền được sửa"
+     "You do not have permission to edit" : "Bạn không có quyền được sửa",
+     "ID" : "ID"
     }

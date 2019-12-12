@@ -11,7 +11,7 @@
                 </div>
                 @if (session('notification'))
                 <div class="alert alert-success">
-                    {{session('notification')}}
+                    {{ session('notification') }}
                 </div>
                 @endif
                 @if (session('error'))
@@ -20,9 +20,10 @@
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
                         <tr align="center">
-                            <th>ID</th>
+                            <th>{{ __('ID') }}</th>
                             <th>{{ __('Title') }}</th>
                             <th>{{ __('Content') }}</th>
+                            <th>{{ __('Category')}}</th>
                             <th>{{ __('Created at') }}</th>
                             <th>{{ __('Updated at') }}</th>
                             <th>{{ __('Delete') }}</th>
@@ -31,15 +32,18 @@
                     </thead>
                     <tbody>
                         @foreach ($posts as $post)
-                        <tr class="odd gradeX" align="center">
-                            <td>{{$post->id}}</td>
-                            <td>{{$post->title}}</td>
-                            <td>{{$post->content}}</td>
-                            <td>{{$post->created_at}}</td>
-                            <th>{{$post->updated_at}}</th>
-                            <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="{{ route('post.delete',$post->id)}}">{{ __('Delete') }}</a></td>
-                            <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="{{ route('post.edit',$post->id)}}">{{ __('Edit') }}</a></td>
-                        </tr>
+                            @foreach ($post->categories->pluck('name') as $cate)
+                                <tr class="odd gradeX" align="center">
+                                    <td>{{ $post->id }}</td>
+                                    <td>{{ $post->title }}</td>
+                                    <td>{{ $post->content }}</td>
+                                    <td>{{ $cate }}</td>
+                                    <td>{{ $post->created_at }}</td>
+                                    <th>{{ $post->updated_at }}</th>
+                                    <td class="center"><i class="fa fa-trash-o fa-fw"></i><a href="{{ route('post.delete', $post->id) }}">{{ __('Delete') }}</a></td>
+                                    <td class="center"><i class="fa fa-pencil fa-fw"></i><a href="{{ route('post.edit', $post->id) }}">{{ __('Edit') }}</a></td>
+                                </tr>
+                            @endforeach
                         @endforeach
                     </tbody>
                 </table>
